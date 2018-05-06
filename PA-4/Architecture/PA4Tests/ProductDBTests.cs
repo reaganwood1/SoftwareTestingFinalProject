@@ -21,6 +21,15 @@ namespace PA4Tests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void AttemptGetProductByIDNoProductByIDFound()
+        {
+            List<Product> products = ProductDB.GetProductList();
+            int numberOfProducts = products.Count;
+            Product returnedProduct = ProductDB.GetProduct(numberOfProducts);
+        }
+
+        [TestMethod]
         public void GetProductListCheckNotNull()
         {
             List<Product> products = ProductDB.GetProductList();
