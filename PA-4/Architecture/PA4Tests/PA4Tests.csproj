@@ -51,6 +51,7 @@
     <Compile Include="ProductDBTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RebateDBTests.cs" />
+    <Compile Include="TransasctionDBTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

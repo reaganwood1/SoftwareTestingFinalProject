@@ -16,7 +16,7 @@ namespace PA4Tests
             Random randomGenerator = new Random();
             int productIntToSelect = randomGenerator.Next(1, numberOfProducts);
             Product productToSelect = products[productIntToSelect-1];
-            Product returnedProduct = ProductDB.GetProduct(productIntToSelect);
+            Product returnedProduct =ProductDB.GetProduct(productIntToSelect);
             Assert.AreEqual(returnedProduct, productToSelect);
         }
 
