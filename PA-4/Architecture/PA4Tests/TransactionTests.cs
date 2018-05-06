@@ -8,6 +8,9 @@ namespace PA4Tests
     [TestClass]
     public class TransactionTests
     {
+        /// <summary>
+        /// Error calculating the transaction rebate amount
+        /// </summary>
         [TestMethod]
         public void TestTransactionIncludeRebate()
         {
