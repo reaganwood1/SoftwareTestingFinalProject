@@ -54,6 +54,7 @@
     <Compile Include="RebateDBTests.cs" />
     <Compile Include="TransasctionDBTests.cs" />
     <Compile Include="TransactionTests.cs" />
+    <Compile Include="IntegrationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
