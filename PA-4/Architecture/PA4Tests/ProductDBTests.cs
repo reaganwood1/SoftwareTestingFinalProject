@@ -14,19 +14,22 @@ namespace PA4Tests
             List<Product> products = ProductDB.GetProductList();
             int numberOfProducts = products.Count;
             Random randomGenerator = new Random();
-            int productIntToSelect = randomGenerator.Next(0, numberOfProducts - 1);
-            Product productToSelect = products[productIntToSelect];
+            int productIntToSelect = randomGenerator.Next(1, numberOfProducts);
+            Product productToSelect = products[productIntToSelect-1];
             Product returnedProduct = ProductDB.GetProduct(productIntToSelect);
-            Assert.Equals(returnedProduct, productToSelect);
+            Assert.AreEqual(returnedProduct, productToSelect);
         }
 
+        /// <summary>
+        /// Untestable how code is currently written
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(Exception))]
         public void AttemptGetProductByIDNoProductByIDFound()
         {
             List<Product> products = ProductDB.GetProductList();
             int numberOfProducts = products.Count;
-            Product returnedProduct = ProductDB.GetProduct(numberOfProducts);
+            Product returnedProduct = ProductDB.GetProduct(numberOfProducts+1);
         }
 
         [TestMethod]
