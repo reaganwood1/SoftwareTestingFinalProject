@@ -50,8 +50,9 @@
   <ItemGroup>
     <Compile Include="ProductDBTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProductModelTest.cs" />
     <Compile Include="RebateDBTests.cs" />
-    <Compile Include="TransasctionDBTests.cs" />
+    <Compile Include="TransactionDBTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
