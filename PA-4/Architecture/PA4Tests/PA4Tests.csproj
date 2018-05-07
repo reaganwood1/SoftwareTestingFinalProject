@@ -57,6 +57,7 @@
     <Compile Include="TransactionDBTests.cs" />
     <Compile Include="TransactionTests.cs" />
     <Compile Include="IntegrationTests.cs" />
+    <Compile Include="ReturnControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
