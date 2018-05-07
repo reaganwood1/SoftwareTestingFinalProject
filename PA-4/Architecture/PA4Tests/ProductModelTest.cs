@@ -19,6 +19,9 @@ namespace PA4Tests
             Assert.AreEqual(p.GetName, c.GetName);
         }
 
+        /// <summary>
+        /// Tests that the product name getter returns the product name
+        /// </summary>
         [TestMethod]
         public void TestGetName()
         {
@@ -26,6 +29,9 @@ namespace PA4Tests
             Assert.AreEqual(p.GetName, "Test");
         }
 
+        /// <summary>
+        /// Tests that the product price getter returns the product price
+        /// </summary>
         [TestMethod]
         public void TestGetPrice()
         {
@@ -33,6 +39,9 @@ namespace PA4Tests
             Assert.AreEqual(p.GetPrice, 8.99);
         }
 
+        /// <summary>
+        /// Tests that the product id getter returns the product id
+        /// </summary>
         [TestMethod]
         public void TestGetID()
         {

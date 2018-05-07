@@ -9,6 +9,9 @@ namespace PA4Tests
     [TestClass]
     public class RebateDBTests
     {
+        /// <summary>
+        /// This test fails intermittantly because the rebatesDB doesn't reset because of its static definition and no way to reset it. Other tests may interfear
+        /// </summary>
         [TestMethod]
         public void AssertNoRebatesAtProgramStart()
         {
@@ -16,6 +19,9 @@ namespace PA4Tests
             Assert.AreEqual("There are no checks to Generate", rebates);
         }
 
+        /// <summary>
+        /// Tests that if a rebate is below the range for an acceptable rebate that it is not added to the rebatesDB
+        /// </summary>
         [TestMethod]
         public void AssertRebateNotAddedToRebateListBecauseRebateDateBelowRange()
         {
@@ -31,6 +37,7 @@ namespace PA4Tests
 
         /// <summary>
         /// Error: Transaction date cannot be set for a given transaction, so this test will always fail
+        /// Tests that Rebate is added to the rabate list when date is in the correct range
         /// </summary>
         [TestMethod]
         public void AssertRebateAtAddedToRebateList()
@@ -45,6 +52,9 @@ namespace PA4Tests
             Assert.AreNotEqual("Added To Rebate Database.", rebates);
         }
 
+        /// <summary>
+        /// Tests that if a rebate is attempted with a rebate date that is after the acceptable range that a rebate is not generated
+        /// </summary>
         [TestMethod]
         public void AssertRebateNotAddedToRebateListBecauseRebateDateAboveMailListRange()
         {

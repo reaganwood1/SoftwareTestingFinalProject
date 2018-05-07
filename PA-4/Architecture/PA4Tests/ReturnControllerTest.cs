@@ -8,6 +8,9 @@ namespace PA4Tests
     [TestClass]
     public class ReturnControllerTests
     {
+        /// <summary>
+        /// Tests that transaction is added to the rebate list for rebate
+        /// </summary>
         [TestMethod]
         public void TestAddToRebateList()
         {
@@ -27,12 +30,16 @@ namespace PA4Tests
             Transaction t1 = new Transaction(salesID, items);
             TransactionDB.AddTransaction(t1);
 
+            // create a rebates controller and try to access the transaction and then rebate it. However, error with Transactions so fails
             Observer ob = new Observer((string s, State status) => { Assert.AreNotEqual(rebatesBefore, s); Assert.AreEqual(status, State.Rebate); });
             ReturnController controller = new ReturnController();
             controller.RegisterR(ob);
             controller.ProcessReturn(1,1,1); 
         }
 
+        /// <summary>
+        /// Just tests that the rebates controller delegate function functions when set
+        /// </summary>
         [TestMethod]
         public void TestRegisterRebateControllerObservber()
         {

@@ -11,6 +11,9 @@ namespace PA4Tests
     [TestClass]
     public class TransasctionDBTests
     {
+        /// <summary>
+        /// Tests that transactions can be added to the TransactionsDB
+        /// </summary>
         [TestMethod]
         public void TestAddTransasction()
         {
@@ -31,7 +34,9 @@ namespace PA4Tests
 
         }
 
-
+        /// <summary>
+        /// Tests that a transaction entered into the database can be retrieved
+        /// </summary>
         [TestMethod]
         public void TestGetTransaction()
         {
@@ -55,6 +60,9 @@ namespace PA4Tests
 
         }
 
+        /// <summary>
+        /// Tests that transactions can be retrieved from the DB by their int identifier. Error adding transactions to the DB
+        /// </summary>
         [TestMethod]
         public void TestGetTransasctionInt()
         {

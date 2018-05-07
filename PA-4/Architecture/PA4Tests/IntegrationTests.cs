@@ -3,11 +3,20 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using PA_4_GUI;
 
+/// <summary>
+/// We wanted to do more integration tests but we ran out of time
+/// </summary>
 namespace PA4Tests
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [TestClass]
     public class IntegrationTests
     {
+        /// <summary>
+        /// Tests that an item can be added to the Transaction DB and also the same item can be returned
+        /// </summary>
         [TestMethod]
         public void TestAllTestDB()
         {

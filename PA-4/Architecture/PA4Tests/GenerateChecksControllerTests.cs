@@ -8,6 +8,9 @@ namespace PA4Tests
     public class GenerateChecksControllerTests
     {
 
+        /// <summary>
+        /// Test to see that the generate checks output matches what is returned from the RebateDB
+        /// </summary>
         [TestMethod]
         public void TestGenerateChecks()
         {
@@ -31,6 +34,9 @@ namespace PA4Tests
             controller.update("", State.Generate);
         }
 
+        /// <summary>
+        /// Simple test to make sure the observer for the ChecksController is called correctly
+        /// </summary>
         [TestMethod]
         public void TestObserverDelegateCalledWithCorrectStringAndStatus()
         {

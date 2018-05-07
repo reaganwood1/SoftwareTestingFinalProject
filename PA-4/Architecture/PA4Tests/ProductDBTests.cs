@@ -8,6 +8,10 @@ namespace PA4Tests
     [TestClass]
     public class ProductDBTests
     {
+        /// <summary>
+        /// Asserts that a product retrieved form the ProductDB is the item in the right index position in the product
+        /// db items list
+        /// </summary>
         [TestMethod]
         public void GetProductByID()
         {
@@ -21,7 +25,8 @@ namespace PA4Tests
         }
 
         /// <summary>
-        /// Untestable how code is currently written
+        /// Tests that if a product id entered is less than 0 (ie not found), that it throws a specified exception. 
+        /// The program however tries to index an array and throws an uncaught exception and fails
         /// </summary>
         [TestMethod]
         [ExpectedException(typeof(Exception))]
@@ -32,11 +37,14 @@ namespace PA4Tests
             Product returnedProduct = ProductDB.GetProduct(numberOfProducts+1);
         }
 
+        /// <summary>
+        /// Check that the products list is greater than 0
+        /// </summary>
         [TestMethod]
-        public void GetProductListCheckNotNull()
+        public void GetProductListCheckGreaterThan0Products()
         {
             List<Product> products = ProductDB.GetProductList();
-            Assert.IsNotNull(products);
+            Assert.IsTrue(products.Count > 0);
         }
     }
 }

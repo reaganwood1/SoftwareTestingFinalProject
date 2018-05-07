@@ -10,6 +10,7 @@ namespace PA4Tests
     {
         /// <summary>
         /// Error calculating the transaction rebate amount
+        /// Suppossed to return the transaction rebate amount if items can be rebated
         /// </summary>
         [TestMethod]
         public void TestTransactionIncludeRebate()
@@ -28,6 +29,9 @@ namespace PA4Tests
             Assert.AreEqual(rebate, "Sales Number:" + salesID + "\nRebate Total: $" + itemCost + "\n");
         }
 
+        /// <summary>
+        /// Tests that a transaction receipt is generated with text
+        /// </summary>
         [TestMethod]
         public void TestFormatTransactionReceipt()
         {
@@ -43,10 +47,11 @@ namespace PA4Tests
         }
 
         /// <summary>
-        /// No way to set the transaction id, this test will fail
+        /// No way to set the transaction date, this test will fail
+        /// Gets that transaction date
         /// </summary>
         [TestMethod]
-        public void TestGetTransactionID()
+        public void TestGetTransactionDate()
         {
             int salesID = 1;
             int itemID = 1;
@@ -59,6 +64,9 @@ namespace PA4Tests
             Assert.AreEqual(t1.GetTD, null);
         }
 
+        /// <summary>
+        /// Gets a list of items present in the transaction
+        /// </summary>
         [TestMethod]
         public void GetItems()
         {
