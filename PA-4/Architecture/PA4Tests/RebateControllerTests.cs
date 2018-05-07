@@ -123,5 +123,33 @@ namespace PA4Tests
 
 
         /* NOTE: THIS Begins the return controller testing. There seems to be a problem with adding test modules to my version of visual studio. Basically the error is that tests will run in this module but not in any new module I create */
+        /// <summary>
+        /// This test fails because TransactionDB is static and can't be reset in between tests
+        /// </summary>
+        [TestMethod]
+        public void TestProcessReturnInReturnController()
+        {
+            // create transaction
+            //Create observer
+            Observer ob1 = new Observer((string s, State status) => {  });
+
+            //add transaction through the transaction controller
+            TransactionController controller = new TransactionController();
+            controller.RegisterR(ob1);
+            Tuple<int, int> productIDTransactionTyple = new Tuple<int, int>(1, 1);
+            List<Tuple<int, int>> tuples = new List<Tuple<int, int>>
+            {
+                productIDTransactionTyple
+            };
+            controller.CreateTransaction(tuples);
+
+            //Create observer
+            Observer ob = new Observer((string s, State status) => { Assert.AreEqual("Success! Items returned.", s); Assert.AreEqual(status, State.Return); });
+
+            //add transaction through the transaction controller
+            ReturnController returnController = new ReturnController();
+            returnController.RegisterR(ob);
+            returnController.ProcessReturn(1, 1, 1);
+        }
     }
 }
