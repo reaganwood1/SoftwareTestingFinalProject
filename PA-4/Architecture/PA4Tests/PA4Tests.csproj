@@ -52,8 +52,9 @@
     <Compile Include="ProductDBTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProductModelTest.cs" />
+    <Compile Include="RebateControllerTests.cs" />
     <Compile Include="RebateDBTests.cs" />
-    <Compile Include="TransasctionDBTests.cs" />
+    <Compile Include="TransactionDBTests.cs" />
     <Compile Include="TransactionTests.cs" />
     <Compile Include="IntegrationTests.cs" />
   </ItemGroup>
