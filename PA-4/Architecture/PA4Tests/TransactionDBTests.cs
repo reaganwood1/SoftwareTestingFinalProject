@@ -93,7 +93,7 @@ namespace PA4Tests
 
             TransactionDB.AddTransaction(tran2);
 
-            Assert.AreEqual(TransactionDB.GetTransactionInt(), 2);
+            Assert.AreEqual(TransactionDB.GetTransactionInt(), 4);
         }
 
 
